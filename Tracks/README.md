@@ -1,7 +1,7 @@
-## README including tracks made from 14-09-2021. For previous tracks see validtion studies at UMCU genome diagnostics if applicable
+## README including tracks made from 14-09-2021. 
+For previous tracks: see validation studies at UMCU genome diagnostics if applicable
 
-
-## 14-09-2021. Addition of BAIT file for Agilent SureSelect v7 enrichment design elidS31285117.
+#14-09-2021. Addition of BAIT file for Agilent SureSelect v7 enrichment design elidS31285117.
 
 Requirements:
 * Track files from Agilent SureSelect v7 elidS31285117, specifically the Covered.bed track. Files can be downloaded from the Agilent website.
@@ -16,7 +16,7 @@ java -jar -Xmx4G picard.jar BedToIntervalList I=S31285117_Covered_4kol_nochr.bed
 rm S31285117_Covered_4kol_nochr.bed
 ```
 
-## 14-09-2021. Addition of Agilent SureSelect v7 specific targets to the calling target.
+#14-09-2021. Addition of Agilent SureSelect v7 specific targets to the calling target.
 
 Requirements:
 * Original target BED file (i.e. ENSEMBL_UCSC_merged_collapsed_sorted_v3_CREv2_100bpflank.bed ).
