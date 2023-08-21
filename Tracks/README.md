@@ -70,6 +70,6 @@ singularity run -B /hpc/:/hpc/ -B $TMPDIR:$TMPDIR /hpc/diaggen/software/singular
 picard -Xmx4G  BedToIntervalList I=ENSEMBL_UCSC_merged_collapsed_sorted_v3_CREv2_SSv7_CREv4_add_100bpflank_tmp.bed O=ENSEMBL_UCSC_merged_collapsed_sorted_v3_CREv2_SSv7_CREv4_add_100bpflank.interval_list UNIQUE=true  SD=/hpc/diaggen/data/databases/ref_genomes/Homo_sapiens.GRCh37.GATK.illumina/Homo_sapiens.GRCh37.GATK.illumina.dict
 exit
 
-rm S34226467_Padded.bed S34226467_Padded_unique.bed S34226467_Padded_100bp_5kol.bed S34226467_Padded_100bp.bed ENSEMBL_UCSC_merged_collapsed_sorted_v3_CREv2_SSv7_CREv4_add_100bpflank_tmp.bed
+rm S34226467_Padded.bed S34226467_Padded_unique.bed S34226467_Padded_100bp_5kol.bed S34226467_Padded_100bp.bed ENSEMBL_UCSC_merged_collapsed_sorted_v3_CREv2_SSv7_CREv4_add_100bpflank_tmp.bed ENSEMBL_UCSC_merged_collapsed_sorted_v3_CREv2_SSv7_CREv4_100bpflank.bed
 ```
 
