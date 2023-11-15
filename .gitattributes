@@ -5,5 +5,6 @@
 *.interval_list filter=lfs diff=lfs merge=lfs -text
 *.UD filter=lfs diff=lfs merge=lfs -text
 
-# Disable git-lfs for pharmacogenetics bed
+# Disable git-lfs for pharmacogenetics bed and vcf
 pharmacogenetics/*.bed -filter=lfs -diff=lfs -merge=lfs -text
+pharmacogenetics/*.vcf -filter=lfs -diff=lfs -merge=lfs -text
