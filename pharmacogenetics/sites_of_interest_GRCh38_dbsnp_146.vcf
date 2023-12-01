@@ -1,0 +1,85 @@
+##fileformat=VCFv4.0
+##fileDate=20151104
+##source=dbSNP
+##dbSNP_BUILD_ID=146
+##reference=GRCh38.p2
+##phasing=partial
+##variationPropertyDocumentationUrl=ftp://ftp.ncbi.nlm.nih.gov/snp/specs/dbSNP_BitField_latest.pdf	
+##INFO=<ID=RS,Number=1,Type=Integer,Description="dbSNP ID (i.e. rs number)">
+##INFO=<ID=RSPOS,Number=1,Type=Integer,Description="Chr position reported in dbSNP">
+##INFO=<ID=RV,Number=0,Type=Flag,Description="RS orientation is reversed">
+##INFO=<ID=VP,Number=1,Type=String,Description="Variation Property.  Documentation is at ftp://ftp.ncbi.nlm.nih.gov/snp/specs/dbSNP_BitField_latest.pdf">
+##INFO=<ID=GENEINFO,Number=1,Type=String,Description="Pairs each of gene symbol:gene id.  The gene symbol and id are delimited by a colon (:) and each pair is delimited by a vertical bar (|)">
+##INFO=<ID=dbSNPBuildID,Number=1,Type=Integer,Description="First dbSNP Build for RS">
+##INFO=<ID=SAO,Number=1,Type=Integer,Description="Variant Allele Origin: 0 - unspecified, 1 - Germline, 2 - Somatic, 3 - Both">
+##INFO=<ID=SSR,Number=1,Type=Integer,Description="Variant Suspect Reason Codes (may be more than one value added together) 0 - unspecified, 1 - Paralog, 2 - byEST, 4 - oldAlign, 8 - Para_EST, 16 - 1kg_failed, 1024 - other">
+##INFO=<ID=WGT,Number=1,Type=Integer,Description="Weight, 00 - unmapped, 1 - weight 1, 2 - weight 2, 3 - weight 3 or more">
+##INFO=<ID=VC,Number=1,Type=String,Description="Variation Class">
+##INFO=<ID=PM,Number=0,Type=Flag,Description="Variant is Precious(Clinical,Pubmed Cited)">
+##INFO=<ID=TPA,Number=0,Type=Flag,Description="Provisional Third Party Annotation(TPA) (currently rs from PHARMGKB who will give phenotype data)">
+##INFO=<ID=PMC,Number=0,Type=Flag,Description="Links exist to PubMed Central article">
+##INFO=<ID=S3D,Number=0,Type=Flag,Description="Has 3D structure - SNP3D table">
+##INFO=<ID=SLO,Number=0,Type=Flag,Description="Has SubmitterLinkOut - From SNP->SubSNP->Batch.link_out">
+##INFO=<ID=NSF,Number=0,Type=Flag,Description="Has non-synonymous frameshift A coding region variation where one allele in the set changes all downstream amino acids. FxnClass = 44">
+##INFO=<ID=NSM,Number=0,Type=Flag,Description="Has non-synonymous missense A coding region variation where one allele in the set changes protein peptide. FxnClass = 42">
+##INFO=<ID=NSN,Number=0,Type=Flag,Description="Has non-synonymous nonsense A coding region variation where one allele in the set changes to STOP codon (TER). FxnClass = 41">
+##INFO=<ID=REF,Number=0,Type=Flag,Description="Has reference A coding region variation where one allele in the set is identical to the reference sequence. FxnCode = 8">
+##INFO=<ID=SYN,Number=0,Type=Flag,Description="Has synonymous A coding region variation where one allele in the set does not change the encoded amino acid. FxnCode = 3">
+##INFO=<ID=U3,Number=0,Type=Flag,Description="In 3' UTR Location is in an untranslated region (UTR). FxnCode = 53">
+##INFO=<ID=U5,Number=0,Type=Flag,Description="In 5' UTR Location is in an untranslated region (UTR). FxnCode = 55">
+##INFO=<ID=ASS,Number=0,Type=Flag,Description="In acceptor splice site FxnCode = 73">
+##INFO=<ID=DSS,Number=0,Type=Flag,Description="In donor splice-site FxnCode = 75">
+##INFO=<ID=INT,Number=0,Type=Flag,Description="In Intron FxnCode = 6">
+##INFO=<ID=R3,Number=0,Type=Flag,Description="In 3' gene region FxnCode = 13">
+##INFO=<ID=R5,Number=0,Type=Flag,Description="In 5' gene region FxnCode = 15">
+##INFO=<ID=OTH,Number=0,Type=Flag,Description="Has other variant with exactly the same set of mapped positions on NCBI refernce assembly.">
+##INFO=<ID=CFL,Number=0,Type=Flag,Description="Has Assembly conflict. This is for weight 1 and 2 variant that maps to different chromosomes on different assemblies.">
+##INFO=<ID=ASP,Number=0,Type=Flag,Description="Is Assembly specific. This is set if the variant only maps to one assembly">
+##INFO=<ID=MUT,Number=0,Type=Flag,Description="Is mutation (journal citation, explicit fact): a low frequency variation that is cited in journal and other reputable sources">
+##INFO=<ID=VLD,Number=0,Type=Flag,Description="Is Validated.  This bit is set if the variant has 2+ minor allele count based on frequency or genotype data.">
+##INFO=<ID=G5A,Number=0,Type=Flag,Description=">5% minor allele frequency in each and all populations">
+##INFO=<ID=G5,Number=0,Type=Flag,Description=">5% minor allele frequency in 1+ populations">
+##INFO=<ID=HD,Number=0,Type=Flag,Description="Marker is on high density genotyping kit (50K density or greater).  The variant may have phenotype associations present in dbGaP.">
+##INFO=<ID=GNO,Number=0,Type=Flag,Description="Genotypes available. The variant has individual genotype (in SubInd table).">
+##INFO=<ID=KGPhase1,Number=0,Type=Flag,Description="1000 Genome phase 1 (incl. June Interim phase 1)">
+##INFO=<ID=KGPhase3,Number=0,Type=Flag,Description="1000 Genome phase 3">
+##INFO=<ID=CDA,Number=0,Type=Flag,Description="Variation is interrogated in a clinical diagnostic assay">
+##INFO=<ID=LSD,Number=0,Type=Flag,Description="Submitted from a locus-specific database">
+##INFO=<ID=MTP,Number=0,Type=Flag,Description="Microattribution/third-party annotation(TPA:GWAS,PAGE)">
+##INFO=<ID=OM,Number=0,Type=Flag,Description="Has OMIM/OMIA">
+##INFO=<ID=NOC,Number=0,Type=Flag,Description="Contig allele not present in variant allele list. The reference sequence allele at the mapped position is not present in the variant allele list, adjusted for orientation.">
+##INFO=<ID=WTD,Number=0,Type=Flag,Description="Is Withdrawn by submitter If one member ss is withdrawn by submitter, then this bit is set.  If all member ss' are withdrawn, then the rs is deleted to SNPHistory">
+##INFO=<ID=NOV,Number=0,Type=Flag,Description="Rs cluster has non-overlapping allele sets. True when rs set has more than 2 alleles from different submissions and these sets share no alleles in common.">
+##FILTER=<ID=NC,Description="Inconsistent Genotype Submission For At Least One Sample">
+##INFO=<ID=CAF,Number=.,Type=String,Description="An ordered, comma delimited list of allele frequencies based on 1000Genomes, starting with the reference allele followed by alternate alleles as ordered in the ALT column. Where a 1000Genomes alternate allele is not in the dbSNPs alternate allele set, the allele is added to the ALT column.  The minor allele is the second largest value in the list, and was previuosly reported in VCF as the GMAF.  This is the GMAF reported on the RefSNP and EntrezSNP pages and VariationReporter">
+##INFO=<ID=COMMON,Number=1,Type=Integer,Description="RS is a common SNP.  A common SNP is one that has at least one 1000Genomes population with a minor allele of frequency >= 1% and for which 2 or more founders contribute to that minor allele frequency.">
+#CHROM	POS	ID	REF	ALT	QUAL	FILTER	INFO
+chr1	97082391	rs67376798	T	A	.	.	RS=67376798;RSPOS=97082391;dbSNPBuildID=130;SSR=0;SAO=1;VP=0x050368000a05040436110100;GENEINFO=DPYD:1806;WGT=1;VC=SNV;PM;PMC;S3D;SLO;NSM;REF;ASP;VLD;HD;KGPhase1;KGPhase3;LSD;OM;CAF=0.9978,0.002196;COMMON=1
+chr1	97450058	rs3918290	C	G,T	.	.	RS=3918290;RSPOS=97450058;RV;dbSNPBuildID=108;SSR=0;SAO=1;VP=0x050028100005040537000100;GENEINFO=DPYD:1806;WGT=1;VC=SNV;PM;PMC;DSS;ASP;VLD;HD;GNO;KGPhase1;KGPhase3;CAF=0.997,.,0.002995;COMMON=1
+chr1	97515787	rs55886062	A	C,T	.	.	RS=55886062;RSPOS=97515787;dbSNPBuildID=129;SSR=0;SAO=1;VP=0x050368080a05000436110100;GENEINFO=DPYD:1806;WGT=1;VC=SNV;PM;PMC;S3D;SLO;NSM;REF;INT;ASP;HD;KGPhase1;KGPhase3;LSD;OM;CAF=0.9998,0.0001997,.;COMMON=0
+chr1	97573863	rs56038477	C	T	.	.	RS=56038477;RSPOS=97573863;dbSNPBuildID=129;SSR=0;SAO=1;VP=0x050260000305040536100100;GENEINFO=DPYD:1806;WGT=1;VC=SNV;PM;S3D;REF;SYN;ASP;VLD;HD;GNO;KGPhase1;KGPhase3;LSD;CAF=0.9904,0.009585;COMMON=1
+chr6	18130687	rs1142345	T	C	.	.	RS=1142345;RSPOS=18130687;RV;dbSNPBuildID=86;SSR=0;SAO=1;VP=0x050378000a05150537110100;GENEINFO=TPMT:7172;WGT=1;VC=SNV;PM;TPA;PMC;S3D;SLO;NSM;REF;ASP;VLD;G5;HD;GNO;KGPhase1;KGPhase3;LSD;OM;CAF=0.9609,0.03914;COMMON=1
+chr6	18138997	rs1800460	C	T	.	.	RS=1800460;RSPOS=18138997;RV;dbSNPBuildID=127;SSR=0;SAO=1;VP=0x050378000a05150536110100;GENEINFO=TPMT:7172;WGT=1;VC=SNV;PM;TPA;PMC;S3D;SLO;NSM;REF;ASP;VLD;G5;HD;GNO;KGPhase1;KGPhase3;LSD;OM;CAF=0.9872,0.01278;COMMON=1
+chr6	18143724	rs1800462	C	G	.	.	RS=1800462;RSPOS=18143724;RV;dbSNPBuildID=89;SSR=0;SAO=1;VP=0x050368000a05040536110100;GENEINFO=TPMT:7172;WGT=1;VC=SNV;PM;PMC;S3D;SLO;NSM;REF;ASP;VLD;HD;GNO;KGPhase1;KGPhase3;LSD;OM;CAF=0.9978,0.002196;COMMON=1
+chr7	99652770	rs41303343	T	TA	.	.	RS=41303343;RSPOS=99652770;RV;dbSNPBuildID=127;SSR=0;SAO=0;VP=0x05033808120515053e000200;GENEINFO=CYP3A5:1577|ZSCAN25:221785;WGT=1;VC=DIV;PM;TPA;PMC;S3D;SLO;NSF;REF;INT;ASP;VLD;G5;HD;GNO;KGPhase1;KGPhase3;CAF=0.9685,0.03155;COMMON=1
+chr7	99665212	rs10264272	C	T	.	.	RS=10264272;RSPOS=99665212;dbSNPBuildID=119;SSR=0;SAO=0;VP=0x050338080305150537000100;GENEINFO=CYP3A5:1577|ZSCAN25:221785;WGT=1;VC=SNV;PM;TPA;PMC;S3D;SLO;REF;SYN;INT;ASP;VLD;G5;HD;GNO;KGPhase1;KGPhase3;CAF=0.9555,0.04453;COMMON=1
+chr7	99672916	rs776746	T	C	.	.	RS=776746;RSPOS=99672916;RV;dbSNPBuildID=86;SSR=0;SAO=0;VP=0x05013868000515053f000100;GENEINFO=CYP3A5:1577|ZSCAN25:221785;WGT=1;VC=SNV;PM;TPA;PMC;SLO;U5;ASS;INT;ASP;VLD;G5;HD;GNO;KGPhase1;KGPhase3;CAF=0.6214,0.3786;COMMON=1
+chr10	94761900	rs12248560	C	A,T	.	.	RS=12248560;RSPOS=94761900;dbSNPBuildID=120;SSR=0;SAO=0;VP=0x05016802000515013f110100;GENEINFO=CYP2C19:1557;WGT=1;VC=SNV;PM;PMC;SLO;R5;ASP;VLD;G5;GNO;KGPhase1;KGPhase3;LSD;OM;CAF=0.8468,.,0.1532;COMMON=1
+chr10	94762706	rs28399504	A	G,T	.	.	RS=28399504;RSPOS=94762706;dbSNPBuildID=125;SSR=0;SAO=1;VP=0x050168000a05040537110100;GENEINFO=CYP2C19:1557;WGT=1;VC=SNV;PM;PMC;SLO;NSM;REF;ASP;VLD;HD;GNO;KGPhase1;KGPhase3;LSD;OM;CAF=0.9992,0.0007987,.;COMMON=0
+chr10	94775416	rs41291556	T	C	.	.	RS=41291556;RSPOS=94775416;dbSNPBuildID=127;SSR=0;SAO=0;VP=0x050368000a05040536110100;GENEINFO=CYP2C19:1557;WGT=1;VC=SNV;PM;PMC;S3D;SLO;NSM;REF;ASP;VLD;HD;GNO;KGPhase1;KGPhase3;LSD;OM;CAF=0.999,0.0009984;COMMON=1
+chr10	94775453	rs72552267	G	A	.	.	RS=72552267;RSPOS=94775453;dbSNPBuildID=130;SSR=0;SAO=0;VP=0x050360000a05040002110100;GENEINFO=CYP2C19:1557;WGT=1;VC=SNV;PM;S3D;SLO;NSM;REF;ASP;VLD;LSD;OM
+chr10	94775489	rs17884712	G	A,C	.	.	RS=17884712;RSPOS=94775489;dbSNPBuildID=124;SSR=0;SAO=0;VP=0x050370000a05050136110100;GENEINFO=CYP2C19:1557;WGT=1;VC=SNV;PM;TPA;S3D;SLO;NSM;REF;ASP;VLD;G5;GNO;KGPhase1;KGPhase3;LSD;OM;CAF=0.9972,0.002796,.;COMMON=1
+chr10	94780653	rs4986893	G	A	.	.	RS=4986893;RSPOS=94780653;dbSNPBuildID=113;SSR=0;SAO=1;VP=0x050378000605150536110101;GENEINFO=CYP2C19:1557;WGT=1;VC=SNV;PM;TPA;PMC;S3D;SLO;NSN;REF;ASP;VLD;G5;HD;GNO;KGPhase1;KGPhase3;LSD;OM;CAF=0.9858,0.01418;COMMON=1
+chr10	94781858	rs6413438	C	T	.	.	RS=6413438;RSPOS=94781858;dbSNPBuildID=116;SSR=0;SAO=0;VP=0x050360000a05040527110100;GENEINFO=CYP2C19:1557;WGT=1;VC=SNV;PM;S3D;SLO;NSM;REF;ASP;VLD;HD;GNO;KGPhase3;LSD;OM;CAF=0.9994,0.000599;COMMON=0
+chr10	94781859	rs4244285	G	A,C	.	.	RS=4244285;RSPOS=94781859;dbSNPBuildID=111;SSR=0;SAO=1;VP=0x05037800030517053f110101;GENEINFO=CYP2C19:1557;WGT=1;VC=SNV;PM;TPA;PMC;S3D;SLO;REF;SYN;ASP;VLD;G5A;G5;HD;GNO;KGPhase1;KGPhase3;LSD;OM;CAF=0.7786,0.2214,.;COMMON=1
+chr10	94852738	rs56337013	C	T	.	.	RS=56337013;RSPOS=94852738;dbSNPBuildID=129;SSR=0;SAO=1;VP=0x050268000a05000402110100;GENEINFO=CYP2C19:1557;WGT=1;VC=SNV;PM;PMC;S3D;NSM;REF;ASP;HD;LSD;OM
+chr10	94942290	rs1799853	C	T	.	.	RS=1799853;RSPOS=94942290;dbSNPBuildID=89;SSR=0;SAO=1;VP=0x050378000a05150537130100;GENEINFO=CYP2C9:1559;WGT=1;VC=SNV;PM;TPA;PMC;S3D;SLO;NSM;REF;ASP;VLD;G5;HD;GNO;KGPhase1;KGPhase3;LSD;MTP;OM;CAF=0.9521,0.04792;COMMON=1
+chr10	94981224	rs28371685	C	T	.	.	RS=28371685;RSPOS=94981224;dbSNPBuildID=125;SSR=0;SAO=0;VP=0x050338000a05050537000100;GENEINFO=CYP2C9:1559;WGT=1;VC=SNV;PM;TPA;PMC;S3D;SLO;NSM;REF;ASP;VLD;G5;HD;GNO;KGPhase1;KGPhase3;CAF=0.9928,0.007188;COMMON=1
+chr10	94981296	rs1057910	A	C	.	.	RS=1057910;RSPOS=94981296;dbSNPBuildID=86;SSR=0;SAO=1;VP=0x050378000a05150537130100;GENEINFO=CYP2C9:1559;WGT=1;VC=SNV;PM;TPA;PMC;S3D;SLO;NSM;REF;ASP;VLD;G5;HD;GNO;KGPhase1;KGPhase3;LSD;MTP;OM;CAF=0.9515,0.04852;COMMON=1
+chr10	94981301	rs28371686	C	A,G	.	.	RS=28371686;RSPOS=94981301;dbSNPBuildID=125;SSR=0;SAO=0;VP=0x050228000a05040536000100;GENEINFO=CYP2C9:1559;WGT=1;VC=SNV;PM;PMC;S3D;NSM;REF;ASP;VLD;HD;GNO;KGPhase1;KGPhase3;CAF=0.9954,.,0.004593;COMMON=1
+chr12	21178615	rs4149056	T	C	.	.	RS=4149056;RSPOS=21178615;dbSNPBuildID=110;SSR=0;SAO=0;VP=0x050178000a0515053f030100;GENEINFO=SLCO1B1:10599;WGT=1;VC=SNV;PM;TPA;PMC;SLO;NSM;REF;ASP;VLD;G5;HD;GNO;KGPhase1;KGPhase3;MTP;OM;CAF=0.9123,0.08766;COMMON=1
+chr13	48045719	rs116855232	C	T	.	.	RS=116855232;RSPOS=48045719;dbSNPBuildID=132;SSR=0;SAO=0;VP=0x050000000a05150436000100;GENEINFO=NUDT15:55270;WGT=1;VC=SNV;NSM;REF;ASP;VLD;G5;HD;KGPhase1;KGPhase3;CAF=0.9605,0.03954;COMMON=1
+chr16	31093557	rs9934438	G	A	.	.	RS=9934438;RSPOS=31093557;dbSNPBuildID=119;SSR=0;SAO=1;VP=0x05016808000515053f110100;GENEINFO=VKORC1:79001;WGT=1;VC=SNV;PM;PMC;SLO;INT;ASP;VLD;G5;HD;GNO;KGPhase1;KGPhase3;LSD;OM;CAF=0.6442,0.3558;COMMON=1
+chr19	41006936	rs3745274	G	A,T	.	.	RS=3745274;RSPOS=41006936;dbSNPBuildID=107;SSR=1;SAO=1;VP=0x050378280a0515053f110140;GENEINFO=CYP2B6:1555;WGT=1;VC=SNV;PM;TPA;PMC;S3D;SLO;NSM;REF;ASS;INT;ASP;VLD;G5;HD;GNO;KGPhase1;KGPhase3;LSD;OM;CAF=0.6843,.,0.3157;COMMON=1
+chr19	41009358	rs2279343	A	G	.	.	RS=2279343;RSPOS=41009358;dbSNPBuildID=100;SSR=0;SAO=1;VP=0x050368080a05070502110100;GENEINFO=CYP2B6:1555;WGT=1;VC=SNV;PM;PMC;S3D;SLO;NSM;REF;INT;ASP;VLD;G5A;G5;HD;GNO;LSD;OM
+chr19	41012316	rs28399499	T	C	.	.	RS=28399499;RSPOS=41012316;dbSNPBuildID=125;SSR=0;SAO=0;VP=0x050328000a05150537000100;GENEINFO=CYP2B6:1555;WGT=1;VC=SNV;PM;PMC;S3D;SLO;NSM;REF;ASP;VLD;G5;HD;GNO;KGPhase1;KGPhase3;CAF=0.9768,0.02316;COMMON=1
