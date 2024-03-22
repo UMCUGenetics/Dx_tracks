@@ -73,3 +73,8 @@ exit
 rm S34226467_Padded.bed S34226467_Padded_unique.bed S34226467_Padded_100bp_5kol.bed S34226467_Padded_100bp.bed ENSEMBL_UCSC_merged_collapsed_sorted_v3_CREv2_SSv7_CREv4_add_100bpflank_tmp.bed ENSEMBL_UCSC_merged_collapsed_sorted_v3_CREv2_SSv7_CREv4_100bpflank.bed
 ```
 
+### 26-01-2024: Added ENSEMBL_UCSC_merged_collapsed_sorted_v3_CREv2_SSv7_CREv4_add_100bpflank_flat.bed
+```
+cat ENSEMBL_UCSC_merged_collapsed_sorted_v3_CREv2_SSv7_CREv4_add_100bpflank.bed | sort -k 1V -k 2n -k 3n | singularity exec -B /hpc:/hpc -B $TMPDIR:$TMPDIR /hpc/diaggen/software/singularity_cache/quay.io-biocontainers-bedtools-2.25.0--he860b03_5.img bedtools merge -i - > ENSEMBL_UCSC_merged_collapsed_sorted_v3_CREv2_SSv7_CREv4_add_100bpflank_flat.bed
+```
+There was a `+` character missing in `additional_regions.bed`, added manually and the `+` character was added manually to line 742231 in `ENSEMBL_UCSC_merged_collapsed_sorted_v3_CREv2_SSv7_CREv4_add_100bpflank.bed`.
