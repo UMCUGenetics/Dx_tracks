@@ -1,5 +1,8 @@
-library(ggplot2)
 library(dplyr)
+
+## This script calculates Structural variant frequencies based on 1kgp data.
+## Currently only SVs of CYP2D6 are considered. The calculated frequencies are
+## Used in DxNextflowPG as  quality control step.
 
 
 Calc_frequencies <- function(gene) {
@@ -13,6 +16,4 @@ Calc_frequencies <- function(gene) {
 
 }
 
-
 Calc_frequencies("CYP2D6")
-Calc_frequencies("CYP2B6")
