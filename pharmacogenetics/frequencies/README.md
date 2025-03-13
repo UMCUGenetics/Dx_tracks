@@ -4,7 +4,7 @@ Pharmacogenomic frequency assets to perform quality control on structural varian
 
 The following files are available
 
-- CYP2D6.csv - Contains structural variant calls on samples from the 1kgp 
+- CYP2D6.csv - Contains structural variant calls on samples from the 1kgp. Downloaded from: https://github.com/sbslee/1kgp-pgx-paper/tree/main/sv-tables
 - CYP2D6_freqs.csv - Contains structural variant frequencies based on the SV calls on 1kgp samples
 
 
