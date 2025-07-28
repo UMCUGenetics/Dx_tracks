@@ -78,3 +78,12 @@ rm S34226467_Padded.bed S34226467_Padded_unique.bed S34226467_Padded_100bp_5kol.
 cat ENSEMBL_UCSC_merged_collapsed_sorted_v3_CREv2_SSv7_CREv4_add_100bpflank.bed | sort -k 1V -k 2n -k 3n | singularity exec -B /hpc:/hpc -B $TMPDIR:$TMPDIR /hpc/diaggen/software/singularity_cache/quay.io-biocontainers-bedtools-2.25.0--he860b03_5.img bedtools merge -i - > ENSEMBL_UCSC_merged_collapsed_sorted_v3_CREv2_SSv7_CREv4_add_100bpflank_flat.bed
 ```
 There was a `+` character missing in `additional_regions.bed`, added manually and the `+` character was added manually to line 742231 in `ENSEMBL_UCSC_merged_collapsed_sorted_v3_CREv2_SSv7_CREv4_add_100bpflank.bed`.
+
+### 19-06-2025: Added 'collapsed' version of Exome target file.
+This collapsed version is needed as Exome target for new GIABEval feature in which variant filtering is improved.\
+For this, overlapping targets needed to be removed in ENSEMBL_UCSC_merged_collapsed_sorted_v3_20bpflank.bed.\
+Picard (2.25.0--he860b03_5) was used to merge overlapping targets.
+```
+cat ENSEMBL_UCSC_merged_collapsed_sorted_v3_20bpflank.bed | sort -k 1V -k 2n -k 3n |   bedtools merge -i - > ENSEMBL_UCSC_merged_collapsed_sorted_v3_20bpflank_collapsed.bed
+```
+
